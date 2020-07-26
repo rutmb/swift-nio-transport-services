@@ -52,7 +52,7 @@ public final class NIOTSEventLoopGroup: EventLoopGroup {
 
     public init(loopCount: Int = 1, defaultQoS: DispatchQoS = .default) {
       #warning("check assert here")
-        precondition(loopCount > 0)
+        //precondition(loopCount > 0)
         self.eventLoops = (0..<loopCount).map { _ in NIOTSEventLoop(qos: defaultQoS) }
     }
 
